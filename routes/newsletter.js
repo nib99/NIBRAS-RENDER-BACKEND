@@ -147,4 +147,14 @@ router.post('/unsubscribe', [
 
 // @route   GET /api/newsletter/count
 // @desc    Get subscriber count (admin only)
-// @access  Public (for
+// @access  Public (for demo purposes)
+router.get('/count', (req, res) => {
+  res.json({
+    success: true,
+    data: {
+      subscriberCount: subscribers.size
+    }
+  });
+});
+
+module.exports = router;
