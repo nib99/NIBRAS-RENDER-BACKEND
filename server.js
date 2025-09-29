@@ -10,7 +10,10 @@ const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 require('dotenv').config();
-
+require('./models/User');
+require('./models/Product');
+require('./models/Order');
+// ... any other models
 // Import routes
 const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/products');
